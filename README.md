@@ -5,7 +5,7 @@
 
 ## Purpose
 
-StudyWithFriends is an application that helps you discover which of your Facebook friends and in your classes and provides an easy interface to create or join study groups with them.
+StudyWithFriends is an application that helps you discover which of your Facebook friends are in your classes and provides an easy interface to create or join study groups with them.
 
 ## Features
 
