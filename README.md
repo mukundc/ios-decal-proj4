@@ -21,7 +21,7 @@ StudyWithFriends is an application that helps you discover which of your Faceboo
 * Next, they are given the option to add a class they are currently taking, or click on  existing classes that they have added earlier. 
 * The add a class view takes them to a screen where they can select a course.
 * Clicking on an existing class of theirs takes them to a view in which they see which other friends on the app are taking that class, as well as existing study groups for that class (with an option to join). 
-* Finally, there will also be a button to create a new study group which takes them to a screen where they can enter a name, description, and meeting time for that group.
+* Finally, there will be a button to create a new study group which takes them to a screen where they can enter a name, description, and meeting time for that group.
 
 
 ## Implementation
