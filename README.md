@@ -13,15 +13,15 @@ StudyWithFriends is an application that helps you discover which of your Faceboo
 * Ability to view which of your Facebook friends are in those classes
 * Ability to create a study group for a class/assignment, selecting a particular day and time
 * Ability to check for the existence of and join an existing study group for a class you are in
-* If time permits, the ability to receive reminder notifications for your meetups
+* The ability to receive reminder notifications for your groups
 
 ## Control Flow
 
-* Users are initially presented with a log in screen, where they can log in with Facebook. 
-* Next, they are given the option to add a class they are currently taking, or click on  existing classes that they have added earlier. 
-* The add a class view takes them to a screen where they can select a course.
-* Clicking on an existing class of theirs takes them to a view in which they see which other friends on the app are taking that class, as well as existing study groups for that class (with an option to join). 
-* Finally, there will be a button to create a new study group which takes them to a screen where they can enter a name, description, and meeting time for that group.
+* Users are initially presented with a log in screen, where they can log in with Facebook. In subsequent uses, the login session is saved, so they will be taken directly to their home screen.
+* The user can add a course listed under Add Courses by selecting the course in the picker, and clicking add. If this course is not already in a user’s “My courses” it will be added to this list. Courses that a user had added earlier when using the app do persist.  
+* The user can then click on any course from the My Courses list to be taken to a course view, where the can view their Facebook friends in the course, or Study Groups for the course. The user can also remove a course from My Courses by swiping right and clicking delete. 
+* Clicking on Friends displayed Facebook friends in the course for that user. For now, I am pulling in friends data from Facebook, and taking the intersection of it and a hardcoded list of names of people in each class (In reality, I would have a database row each class and the users of the app who have added it).
+* Clicking on Study groups takes users to a screen where they can click on existing groups (I have hardcoded a few initial groups only for CS 61A), or create their own study group. A user can swipe right on any group he has created and click delete to remove it (only the creator of the group has this permission). A user who clicks on an existing group can view its details and members, join the group (bar button on the top right) or leave the group after joining (bar button for join changes to leave), and these actions update the members list of the group. They can also set a reminder notification for the time that the group meets. All group data persists.
 
 
 ## Implementation
@@ -29,24 +29,24 @@ StudyWithFriends is an application that helps you discover which of your Faceboo
 ### Model
 
 * Group.swift
-* User.swift
-* Courses.swift
 
 ### View
 
 * LogInView
-* MyCoursesView
-* AddCourseView
+* UserHomeView
+* GroupsView
+* GroupDetailedView
 * CourseView
-* CreateGroupForCourseView
+* FriendsView
 
 ### Controller
 
-* LogInViewController
-* MyCoursesViewController
-* AddCourseViewController
+* ViewController
+* UserHomeViewController
+* GroupsViewController
+* GroupDetailedViewController
 * CourseViewController
-* CreateGroupForCourseViewController
+* FriendsViewController
 
 
 
